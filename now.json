@@ -1,0 +1,11 @@
+{
+  "name": "zeit-gatsby-talk",
+  "builds": [
+    {"src": "package.json", "use": "@now/static-build"}
+  ],
+  "routes": [
+    { "src": "^/images/(.*)", "dest": "/images/$1" },
+    { "src": "my-snippets.js", "dest": "/my-snippets.js" },
+    { "src": "index.html", "dest": "/index.html" }
+  ]
+}

@@ -11,6 +11,10 @@
   },
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx"
+    "build": "npm run now-build",
+    "build:presentation": "mdx-deck build deck.mdx --no-html",
+    "build:images": "cp -r images dist/",
+    "now-build": "yarn run build:presentation && yarn run build:images",
+    "deploy": "now"
   }
 }
