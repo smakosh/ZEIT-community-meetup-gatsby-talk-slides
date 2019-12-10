@@ -1,0 +1,342 @@
+export { future as theme } from 'mdx-deck/themes'
+import { Invert, FullScreenCode } from 'mdx-deck/layouts'
+import { Head, Appear, Image } from 'mdx-deck'
+import Flex from './components/Flex'
+import Item from './components/Item'
+import Sponsor from './components/Sponsor'
+import pageQueries from './my-snippet'
+import staticQueries from './static-queries'
+
+<Head>
+  <title>Introducing Gatsby - ZEIT community Meetup</title>
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta name='twitter:site' content='@smakosh' />
+  <meta name='twitter:title' content='Introducing Gatsby' />
+  <meta name='twitter:description' content='— The modern web framework for building blazing fast websites and apps.' />
+</Head>
+
+export default Invert
+
+<div style={{ textAlign: 'left', maxWidth: 1200, margin: '0 auto' }}>
+  <h1>Introducing Gatsby</h1>
+  <h2>— The modern web framework for building blazing fast websites and apps.</h2>
+  <h4>Built with webpack, React & GraphQL.</h4>
+</div>
+
+---
+
+### Who am I?
+
+<ul style={{ textAlign: 'left' }}>
+  <Appear>
+    <li>I'm Ismail Ghallou,</li>
+    <li>I work as a Full Stack JavaScript Developer at Maltem Consulting Group.</li>
+    <li>I also work on side projects like <a
+        style={{ color: '#fff' }}
+        href="https://ai-hashtags.com/?ref=gatsby-slides"
+        target="_blank">Ai Hashtags </a>
+      & <a
+          style={{ color: '#fff', textDecoration: 'line-through' }}
+          href="https://github.com/smakosh/beafapp/?ref=gatsby-slides"
+          target="_blank">Beaf</a> <i>Which I recently shut down.</i>
+    </li>
+    <li>I publish articles on my personal blog: <a
+          style={{ color: '#fff' }}
+          href="https://smakosh.com/blog/?ref=gatsby-slides"
+          target="_blank">smakosh.com/blog</a></li>
+    <li>And I contribute to open source projects whenever I'm free</li>
+  </Appear>
+</ul>
+
+---
+
+As a web developer, who wants to make a website or web app, you're surrounded by so many choices, resources & communities.
+
+---
+
+<Image src="https://i.imgur.com/4TX9hXn.jpg" />
+
+---
+
+But do you know what all these resources share in common when you're trying to make a website (web app)?
+
+---
+
+export default Invert
+
+Yup, that's right!
+
+Html, CSS & JavaScript
+
+---
+
+So, what if you could use JavaScript for everything?
+
+---
+
+export default Invert
+
+Would you really bother exploring the other options?
+
+---
+
+Or you are like me and have already chosen to do it with JavaScript only?
+
+---
+
+Hopefully you bet on JavaScript as I did 😅, if so, you will have to narrow the choices down a bit and because you want to build a website/web app & not an API or any server side thing.
+
+---
+
+And especially as a React developer, you will end up with these 3 choices
+
+<Flex>
+  <Item width="30">
+    <Appear>
+      <p>CRA (create-react-app)</p>
+      <p>CSR</p>
+      <p>Client side rendering</p>
+    </Appear>
+  </Item>
+  <Item width="30">
+    <Appear>
+      <p>Next Js</p>
+      <p>SSR / static SSR (coming soon)</p>
+      <p>Server side rendering on run time</p>
+    </Appear>
+  </Item>
+  <Item width="30">
+    <Appear>
+      <p>Gatsby Js</p>
+      <p>Static SSR (SSR on build time)</p>
+      <p>Pre-rendering</p>
+    </Appear>
+  </Item>
+</Flex>
+
+---
+
+export default Invert
+
+### So What's Gatsby?
+
+---
+
+# is it:
+
+- A static site generator like Jekyll, Hugo and Pelican?
+- A React boilerplate like create-react-app?
+- A tool to build PWAs?
+
+---
+
+# Gatsby can do all of that!
+
+---
+
+<img width="128" src="https://i.imgur.com/Tckm11A.png" alt="Gatsby logo" />
+
+#### Gatsby is a modern framework to build progressive web apps - Built with React, webpack & GraphQL.
+
+##### It creates hybrid websites: think of it as a mixture of a static website and a React app.
+
+<ul style={{ textAlign: 'left' }}>
+  <li>It generates HTML pages at build time</li>
+  <li>Navigates between pages with pushState just like a SPA</li>
+</ul>
+
+---
+
+export default Invert
+
+
+### But what’s so awesome about it?
+
+---
+
+<Flex>
+  <Item width="50">
+    <ul>
+      <li>You can build your static website or dynamic app with Gatsby.</li>
+      <li>Use different Data sources or file formats to manage content.</li>
+      <li>You could also use different services for search/auth/cart/payments etc...</li>
+    </ul>
+  </Item>
+  <Item width="50">
+    <img src="https://i.imgur.com/f0plKJG.png" alt="chart" />
+  </Item>
+</Flex>
+
+---
+
+### Pros & cons
+
+---
+
+<Flex>
+  <Item width="50">
+    <h4>Pros</h4>
+    <ul>
+      <li>Secured as it’s static</li>
+      <li>Cacheable</li>
+      <li>Cheap to host</li>
+      <li>Out of the box good performance, pwa & best practices.</li>
+      <li>Loads blazing fast</li>
+      <li>SPA look alike</li>
+      <li>Hot reloading</li>
+    </ul>
+  </Item>
+  <Item width="50">
+    <h4>Cons</h4>
+    <ul>
+      <li>Does Not generate new files on demand but does it during build time & for only predicted pages.</li>
+      <li>Slow build time</li>
+    </ul>
+  </Item>
+</Flex>
+
+---
+
+export default Invert
+
+### How does Gatsby render content?
+
+---
+
+<Flex>
+  <Item width="30">
+    <h4>Step 1</h4>
+    <ul>
+      <li>It opens & validates gatsby config file and loads the installed plugins after deleting both the `.cache` and `public` folders of the previous build.</li>
+    </ul>
+  </Item>
+  <Item width="30">
+    <h4>Step 2</h4>
+    <ul>
+      <li>Gatsby Gets the content (if there is any) from your files or headless CMS platforms such as Contentful/Wordpress etc...</li>
+    </ul>
+  </Item>
+  <Item width="30">
+    <h4>Step 3</h4>
+    <ul>
+      <li>finally it Extracts & runs the static queries, then generates necessary pages if you told Gatsby to do so on gatsby-node file.</li>
+    </ul>
+  </Item>
+</Flex>
+
+---
+
+export default Invert
+
+### Page & Static queries
+
+---
+
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+<CodeSurfer
+  title="Page queries can be used within templates only"
+  code={pageQueries}
+  lang="jsx"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: ""},
+    { lines: [1, 2], notes: "We're passing a variable called $slug as argument of type String and is required" },
+    { range: [3, 3], notes: "And we are passing it as value of the slug field argument of the markdownRemark field" },
+    { range: [4, 10], notes: "And we're retuning those fields" },
+    { range: [14, 28], notes: "Finally, we're consuming the data passed as props to our component" },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="While Static queries can be used anywhere"
+  code={staticQueries}
+  lang="jsx"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: ""},
+    { range: [6, 23], notes: "Using useStaticQuery hook to query the allMarkdownRemark field to return the fields we want." },
+    { range: [26, 37], notes: "Then we map the data we get" }
+  ]}
+/>
+
+---
+
+##### Gatsby has templates, pages & components
+
+<ul style={{ textAlign: 'left' }}>
+  <li>Page queries do accept variables via pageContext in gatsby-config but can only be added to page components & templates.</li>
+  <br/>
+  <li>Static queries do not accept variables and can be used anywhere.</li>
+</ul>
+
+---
+
+export default Invert
+
+### Gatsby plugins
+
+---
+
+<ul style={{ textAlign: 'left' }}>
+  <h4>Source plugins</h4>
+  <li>Add external data or content (e.g. your CMS, static files, a REST API) to your Gatsby GraphQL data.</li>
+</ul>
+
+<ul style={{ textAlign: 'left' }}>
+  <h4>Transformers</h4>
+  <li>Transform data from other formats (e.g. Markdown, YAML, CSV) to JSON objects.</li>
+</ul>
+
+<ul style={{ textAlign: 'left' }}>
+  <h4>Services</h4>
+  <li>Add different third-party services to your Gatsby site like (GA, Algolia, Auth0…).</li>
+</ul>
+
+---
+
+### Gatsby is used by popular corporations
+
+<Flex>
+  <Item width="30">
+    <img src="https://i.imgur.com/7nt0ZXJ.png" alt="figma" />
+  </Item>
+  <Item width="30">
+    <img src="https://i.imgur.com/v37Eil4.png" alt="ibm" />
+  </Item>
+  <Item width="30">
+    <img src="https://i.imgur.com/kvOXIBG.jpg" alt="airbnb" />
+  </Item>
+  <Item width="30">
+    <img src="https://i.imgur.com/gRTuxfA.png" alt="nike" />
+  </Item>
+  <Item width="30">
+    <img src="https://i.imgur.com/GpG0oda.jpg" alt="sendgrid" />
+  </Item>
+  <Item width="30">
+    <img src="https://i.imgur.com/3Mpao1W.png" alt="ghost" />
+  </Item>
+</Flex>
+
+---
+
+### Demo
+
+---
+
+export default Invert
+
+### Questions?
+
+---
+
+### References & links
+
+- https://smakosh.com
+- https://github.com/smakosh/introducing-gatsby
+- https://Gatsbyjs.org
+- https://www.gatsbyjs.org/docs/static-query/#how-staticquery-differs-from-page-query
