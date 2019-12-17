@@ -29,7 +29,7 @@ export default Invert
 
 <ul style={{ textAlign: 'left' }}>
   <Appear>
-    <li>I'm Ismail Ghallou,</li>
+    <li>I'm Ismail Ghallou also known on the web as Smakosh.</li>
     <li>I work as a Full Stack JavaScript Developer at Maltem Consulting Group.</li>
     <li>I also work on side projects like <a
         style={{ color: '#fff' }}
@@ -50,7 +50,7 @@ export default Invert
 
 ---
 
-As a web developer, who wants to make a website or web app, you're surrounded by so many choices, resources & communities.
+As a web developer, who wants to make a website or a web app, you're surrounded by so many choices, resources & communities.
 
 ---
 
@@ -108,8 +108,8 @@ And especially as a React developer, you will end up with these 3 choices
   <Item width="30">
     <Appear>
       <p>Gatsby Js</p>
-      <p>Static SSR (SSR on build time)</p>
-      <p>Pre-rendering</p>
+      <p>Static SSR</p>
+      <p>SSR on build time</p>
     </Appear>
   </Item>
 </Flex>
@@ -122,9 +122,9 @@ export default Invert
 
 ---
 
-# is it:
+### is it:
 
-- A static site generator like Jekyll, Hugo and Pelican?
+- A SSG like Jekyll, Hugo and Pelican?
 - A React boilerplate like create-react-app?
 - A tool to build PWAs?
 
@@ -136,7 +136,7 @@ export default Invert
 
 <img width="128" src="https://i.imgur.com/Tckm11A.png" alt="Gatsby logo" />
 
-#### Gatsby is a modern framework to build progressive web apps - Built with React, webpack & GraphQL.
+#### Gatsby is a modern framework to build progressive web apps
 
 ##### It creates hybrid websites: think of it as a mixture of a static website and a React app.
 
@@ -163,7 +163,7 @@ export default Invert
     </ul>
   </Item>
   <Item width="50">
-    <img src="https://i.imgur.com/f0plKJG.png" alt="chart" />
+    <img src="https://i.imgur.com/aDRKKk2.png" alt="chart" />
   </Item>
 </Flex>
 
@@ -182,44 +182,13 @@ export default Invert
       <li>Cheap to host</li>
       <li>Out of the box good performance, pwa & best practices.</li>
       <li>Loads blazing fast</li>
-      <li>SPA look alike</li>
-      <li>Hot reloading</li>
     </ul>
   </Item>
   <Item width="50">
     <h4>Cons</h4>
     <ul>
-      <li>Does Not generate new files on demand but does it during build time & for only predicted pages.</li>
+      <li>no SSR</li>
       <li>Slow build time</li>
-    </ul>
-  </Item>
-</Flex>
-
----
-
-export default Invert
-
-### How does Gatsby render content?
-
----
-
-<Flex>
-  <Item width="30">
-    <h4>Step 1</h4>
-    <ul>
-      <li>It opens & validates gatsby config file and loads the installed plugins after deleting both the `.cache` and `public` folders of the previous build.</li>
-    </ul>
-  </Item>
-  <Item width="30">
-    <h4>Step 2</h4>
-    <ul>
-      <li>Gatsby Gets the content (if there is any) from your files or headless CMS platforms such as Contentful/Wordpress etc...</li>
-    </ul>
-  </Item>
-  <Item width="30">
-    <h4>Step 3</h4>
-    <ul>
-      <li>finally it Extracts & runs the static queries, then generates necessary pages if you told Gatsby to do so on gatsby-node file.</li>
     </ul>
   </Item>
 </Flex>
